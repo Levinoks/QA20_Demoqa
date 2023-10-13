@@ -3,9 +3,6 @@ package tests;
 import manager.HelperStudent;
 import models.StudentDTO;
 import models.StudentDTOLombok;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -38,7 +35,7 @@ public class StudentRegFormTests extends TestBase implements HelperStudent {
                 .city("Delhi")
                 .build();
         //fillStudentForm(student);
-        fillStudentForm(student);
+        fillStudentForm(studentLombok);
         //pause(3);
 
         clickButtonSubmit();

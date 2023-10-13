@@ -2,13 +2,16 @@ package manager;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public interface AppManager {
-    WebDriver driver = new ChromeDriver();
+
+    ChromeOptions options = new ChromeOptions().addArguments("load-extension=C://Tools/5.10.1_0");
+    WebDriver driver = new ChromeDriver(options);
 
     default void init(){
         driver.navigate().to("https://demoqa.com/");
